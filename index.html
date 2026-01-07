@@ -23,6 +23,7 @@
       padding: 80px 40px;
       text-align: center;
       background: #ffffff;
+      box-sizing: border-box;
     }
 
     /* ===== TOPO ===== */
@@ -35,17 +36,20 @@
       font-family: 'Playfair Display', serif;
       font-size: 36px;
       font-style: italic;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .texto {
       font-size: 16px;
       line-height: 1.8;
-      letter-spacing: 1px;
-      margin-bottom: 60px;
+      letter-spacing: 0.8px;
+      margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* ===== ÍCONES CLICÁVEIS ===== */
+    /* ===== ÍCONES ===== */
     .info {
       display: flex;
       justify-content: space-around;
@@ -60,6 +64,7 @@
       flex-direction: column;
       align-items: center;
       transition: transform 0.2s ease, opacity 0.2s ease;
+      max-width: 200px;
     }
 
     .item:hover {
@@ -77,12 +82,13 @@
       align-items: center;
       justify-content: center;
       font-size: 28px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .item span {
       font-size: 14px;
       letter-spacing: 1px;
+      text-align: center;
     }
 
     /* ===== RODAPÉ ===== */
@@ -95,15 +101,37 @@
     /* ===== RESPONSIVO ===== */
     @media (max-width: 600px) {
       .container {
-        padding: 60px 20px;
+        padding: 50px 20px;
+      }
+
+      .capelo {
+        font-size: 42px;
       }
 
       h1 {
-        font-size: 30px;
+        font-size: 28px;
       }
 
       .texto {
         font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+      }
+
+      .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+      }
+
+      .item span {
+        font-size: 13px;
       }
     }
   </style>
@@ -121,27 +149,21 @@
       Um ciclo que se encerra e outro que começa, construído com esforço,
       fé e determinação. Será uma honra ter você ao meu lado para celebrar
       essa conquista.
-
     </p>
-    
 
     <div class="info">
 
-      <!-- LOCAL E DATA -->
-      <a class="item" href="https://www.google.com/maps/place/R.+João+Gava,+920+-+Abranches,+Curitiba+-+PR,+82130-010/@-25.3845516,-49.2761755,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce6cfc98eb099:0x892525cee2ae59fd!8m2!3d-25.3845516!4d-49.2761755!16s%2Fg%2F11c20c5_5j?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+      <a class="item" href="https://www.google.com/maps/place/R.+João+Gava,+920+-+Abranches,+Curitiba+-+PR,+82130-010/" target="_blank">
         <div class="icon">📍</div>
         <span>LOCAL</span>
-        <span>DATA: DIA 18 DE MARÇO ÀS 20:00</span>
-      
+        <span>18 DE MARÇO • 20:00</span>
       </a>
 
-      <!-- TRAJE -->
-      <a class="item" href="https://www.google.com/search?client=opera-gx&q=traje+social&sourceid=opera&ie=UTF-8&oe=UTF-8" target="_blank">
+      <a class="item" href="https://www.google.com/search?q=traje+social" target="_blank">
         <div class="icon">👗</div>
-        <span>TRAJE</span>
+        <span>TRAJE SOCIAL</span>
       </a>
 
-      <!-- CONFIRMAR PRESENÇA -->
       <a class="item" href="https://wa.me/5541995262586?text=Confirmo%20minha%20presença!" target="_blank">
         <div class="icon">✔️</div>
         <span>CONFIRMAR PRESENÇA</span>
@@ -156,10 +178,3 @@
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
